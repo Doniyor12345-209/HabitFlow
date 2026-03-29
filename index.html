@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HabitFlow — Трекер привычек</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">HabitFlow</div>
+    <div class="nav-links">
+      <a href="#home">Главная</a>
+      <a href="#habits">Привычки</a>
+      <a href="#stats">Статистика</a>
+    </div>
+  </nav>
+
+  <!-- ГЛАВНАЯ -->
+  <section class="page" id="home">
+    <div class="hero">
+      <div class="badge fade-up d1">Твой личный трекер</div>
+      <h1 class="hero-title fade-up d2">Привет! Начни<br><em>свой день!</em></h1>
+      <p class="hero-desc fade-up d3">Строй полезные привычки шаг за шагом. Отслеживай прогресс и достигай целей каждый
+        день.</p>
+      <a href="#habits" class="btn-cta fade-up d4">
+        Начать
+        <svg class="arrow-ic" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 10h12M12 5l5 5-5 5" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="feat-grid">
+      <div class="feat-card fade-up d3">
+        <div class="feat-icon">✅</div>
+        <div class="feat-name">Отмечай привычки</div>
+        <div class="feat-text">Ежедневно фиксируй выполненные задачи — простым нажатием.</div>
+      </div>
+      <div class="feat-card fade-up d4">
+        <div class="feat-icon">📊</div>
+        <div class="feat-name">Следи за прогрессом</div>
+        <div class="feat-text">Красивая статистика и диаграммы покажут твой рост.</div>
+      </div>
+      <div class="feat-card fade-up d5">
+        <div class="feat-icon">🔥</div>
+        <div class="feat-name">Серии и стрики</div>
+        <div class="feat-text">Не прерывай цепочку — каждый день на счету!</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ПРИВЫЧКИ -->
+  <section class="page" id="habits">
+    <div class="fade-up d1">
+      <div class="pg-label">Сегодня</div>
+      <h1 class="pg-title">Мои привычки</h1>
+      <p class="pg-sub">Отмечай выполненные и добавляй новые</p>
+    </div>
+
+    <div class="add-row fade-up d2">
+      <input class="add-input" id="newHabitInput" type="text" placeholder="Например: Пить 2 литра воды…" />
+      <button class="btn-add" id="btnAdd">+ Добавить</button>
+    </div>
+
+    <div class="list-meta fade-up d2" id="listMeta">0 привычек на сегодня</div>
+
+    <div class="habits-list" id="habitsList">
+      <div class="hcard fade-up d2">
+        <label class="chk">
+          <input type="checkbox" />
+          <span class="chk-mark">✓</span>
+        </label>
+        <div class="hinfo">
+          <div class="hname">🏃 Утренняя пробежка</div>
+          <div class="hstreak">🔥 0 дней подряд</div>
+        </div>
+        <button class="btn-del">✕ Удалить</button>
+      </div>
+
+      <div class="hcard fade-up d3">
+        <label class="chk">
+          <input type="checkbox" />
+          <span class="chk-mark">✓</span>
+        </label>
+        <div class="hinfo">
+          <div class="hname">📚 Читать 30 минут</div>
+          <div class="hstreak">🔥 0 дней подряд</div>
+        </div>
+        <button class="btn-del">✕ Удалить</button>
+      </div>
+
+      <div class="hcard fade-up d4">
+        <label class="chk">
+          <input type="checkbox" />
+          <span class="chk-mark">✓</span>
+        </label>
+        <div class="hinfo">
+          <div class="hname">💧 Пить воду (2 л)</div>
+          <div class="hstreak">🔥 0 дней подряд</div>
+        </div>
+        <button class="btn-del">✕ Удалить</button>
+      </div>
+
+      <div class="hcard fade-up d5">
+        <label class="chk">
+          <input type="checkbox" />
+          <span class="chk-mark">✓</span>
+        </label>
+        <div class="hinfo">
+          <div class="hname">🧘 Медитация</div>
+          <div class="hstreak">🔥 0 дней подряд</div>
+        </div>
+        <button class="btn-del">✕ Удалить</button>
+      </div>
+
+      <div class="hcard fade-up d6">
+        <label class="chk">
+          <input type="checkbox" />
+          <span class="chk-mark">✓</span>
+        </label>
+        <div class="hinfo">
+          <div class="hname">🍎 Без сахара</div>
+          <div class="hstreak">🔥 0 дней подряд</div>
+        </div>
+        <button class="btn-del">✕ Удалить</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- СТАТИСТИКА -->
+  <section class="page" id="stats">
+    <div class="fade-up d1">
+      <div class="pg-label">Аналитика</div>
+      <h1 class="pg-title">Статистика</h1>
+      <p class="pg-sub">Твои результаты за сегодня</p>
+    </div>
+
+    <div class="stats-kpis fade-up d2">
+      <div class="kpi">
+        <div class="kpi-val kv1" id="statTotal">0</div>
+        <div class="kpi-lbl">Активных привычек</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-val kv2" id="statPercent">0%</div>
+        <div class="kpi-lbl">Выполнено сегодня</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-val kv3" id="statBest">0</div>
+        <div class="kpi-lbl">Лучшая серия</div>
+      </div>
+    </div>
+
+    <div class="stats-main fade-up d3">
+      <div class="ring-card">
+        <div class="ring-wrap">
+          <svg viewBox="0 0 148 148">
+            <defs>
+              <linearGradient id="rg" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#7b5ef8" />
+                <stop offset="100%" stop-color="#2fe4ae" />
+              </linearGradient>
+            </defs>
+            <circle class="ring-track" cx="74" cy="74" r="65" />
+            <circle class="ring-prog" id="ringProg" cx="74" cy="74" r="65" />
+          </svg>
+          <div class="ring-label">
+            <span class="ring-pct" id="ringPct">0%</span>
+            <span class="ring-sub-lbl">сегодня</span>
+          </div>
+        </div>
+        <div class="ring-legend">
+          <div class="ring-leg-item">
+            <div class="leg-dot" style="background:var(--a3)"></div>
+            <span>Выполнено — <span id="legDone">0</span></span>
+          </div>
+          <div class="ring-leg-item">
+            <div class="leg-dot" style="background:var(--border-hi)"></div>
+            <span>Осталось — <span id="legLeft">0</span></span>
+          </div>
+          <div class="ring-leg-item">
+            <div class="leg-dot" style="background:var(--a2)"></div>
+            <span>Всего — <span id="legTotal">0</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bars-card">
+        <div class="bars-title">Привычки сегодня</div>
+        <div class="bar-list" id="barList">
+          <!-- заполняется JS -->
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-bottom fade-up d4">
+      <div class="info-card">
+        <div class="info-title">Список привычек</div>
+        <div class="mini-list" id="miniList">
+          <!-- заполняется JS -->
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-title">Серии привычек 🔥</div>
+        <div class="mini-list" id="streakList">
+          <!-- заполняется JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
